@@ -1,0 +1,27 @@
+{
+	"[javascript][javascriptreact][typescript][typescriptreact][json][jsonc][yaml]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.formatOnSave": true
+	},
+	"editor.codeActionsOnSave": {
+		"source.addMissingImports": "always",
+		"source.fixAll": "always",
+		"source.organizeImports": "always"
+	},
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.detectIndentation": false,
+	"editor.formatOnSave": true,
+	"editor.insertSpaces": false,
+	"files.eol": "\n",
+	"files.exclude": {
+		".swc": true,
+		"coverage": true,
+		"next-env.d.ts": true,
+		"tsconfig.tsbuildinfo": true
+	},
+	"files.trimFinalNewlines": true,
+	"files.trimTrailingWhitespace": true,
+	"npm.packageManager": "pnpm",
+	"typescript.enablePromptUseWorkspaceTsdk": true,
+	"typescript.tsdk": "node_modules/typescript/lib"
+}
