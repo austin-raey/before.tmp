@@ -1,27 +1,26 @@
 {
 	"dependencies": {
 		"@types/node": "22.10.1",
-		"@types/react": "18.3.13",
-		"@types/react-dom": "18.3.1",
+		"@types/react": "19.0.1",
+		"@types/react-dom": "19.0.1",
 		"babel-plugin-react-compiler": "19.0.0-beta-df7b47d-20241124",
-		"next": "15.0.4-canary.36",
+		"next": "15.0.4",
 		"postcss": "8.4.49",
 		"postcss-lightningcss": "1.0.1",
-		"react": "19.0.0-rc.1",
-		"react-dom": "19.0.0-rc.1",
+		"react": "19.0.0",
+		"react-dom": "19.0.0",
 		"tailwindcss": "3.4.16",
 		"typescript": "5.7.2"
 	},
 	"devDependencies": {
 		"@eslint/compat": "1.2.4",
 		"@eslint/js": "9.16.0",
-		"@next/eslint-plugin-next": "15.0.3",
-		"@testing-library/dom": "10.4.0",
+		"@next/eslint-plugin-next": "15.0.4",
 		"@testing-library/jest-dom": "6.6.3",
-		"@testing-library/react": "16.0.1",
+		"@testing-library/react": "16.1.0",
 		"@types/jest": "29.5.14",
 		"eslint": "9.16.0",
-		"eslint-config-next": "15.0.3",
+		"eslint-config-next": "15.0.4",
 		"eslint-config-prettier": "9.1.0",
 		"eslint-plugin-perfectionist": "4.2.0",
 		"eslint-plugin-prettier": "5.2.1",
@@ -29,8 +28,8 @@
 		"eslint-plugin-tailwindcss": "3.17.5",
 		"eslint-plugin-unicorn": "56.0.1",
 		"husky": "9.1.7",
-		"jest": "29.7.0",
-		"jest-environment-jsdom": "29.7.0",
+		"jest": "30.0.0-alpha.6",
+		"jest-environment-jsdom": "30.0.0-alpha.6",
 		"lint-staged": "15.2.10",
 		"prettier": "3.4.2",
 		"typescript-eslint": "8.17.0"
@@ -39,8 +38,11 @@
 		"node": ">=22",
 		"pnpm": ">=9"
 	},
-	"packageManager": "pnpm@9.14.4",
-	"private": true,
+	"packageManager": "pnpm@9.15.0",
+	"resolutions": {
+		"glob": "11.0.0",
+		"jsdom": "25.0.1"
+	},
 	"scripts": {
 		"build": "next build",
 		"dev": "next dev --turbopack",
@@ -52,6 +54,6 @@
 		"start": "next start",
 		"test": "pnpm '/^test:.*/'",
 		"test:jest": "jest",
-		"up-deps": "pnpm up -L && pnpm i react@rc react-dom@rc babel-plugin-react-compiler@beta eslint-plugin-react-compiler@beta"
+		"up-deps": "pnpm up -L && pnpm i babel-plugin-react-compiler@latest eslint-plugin-react-compiler@latest"
 	}
 }

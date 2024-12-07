@@ -1,12 +1,11 @@
 {
-	"[javascript][javascriptreact][typescript][typescriptreact][json][jsonc][yaml]": {
+	"[javascript][javascriptreact][json][jsonc][typescript][typescriptreact][yaml]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode",
 		"editor.formatOnSave": true
 	},
 	"editor.codeActionsOnSave": {
 		"source.addMissingImports": "always",
-		"source.fixAll": "always",
-		"source.organizeImports": "always"
+		"source.fixAll": "always"
 	},
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	"editor.detectIndentation": false,

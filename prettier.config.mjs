@@ -6,7 +6,7 @@ const prettierConfig = {
 	endOfLine: "lf",
 	printWidth: 120,
 	singleQuote: false,
-	trailingComma: "es5",
+	trailingComma: "all",
 	useTabs: true,
 };
 export default prettierConfig;

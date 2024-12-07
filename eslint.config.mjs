@@ -51,5 +51,5 @@ export default ts.config(
 		},
 	},
 	perfectionist.configs["recommended-natural"],
-	{ ignores: [".next/", "coverage/", "node_modules/"] }
+	{ ignores: [".next/", "coverage/", "node_modules/"] },
 );
