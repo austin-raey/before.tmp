@@ -3,7 +3,7 @@
 		"@types/node": "22.10.1",
 		"@types/react": "19.0.1",
 		"@types/react-dom": "19.0.1",
-		"babel-plugin-react-compiler": "19.0.0-beta-df7b47d-20241124",
+		"babel-plugin-react-compiler": "19.0.0-beta-37ed2a7-20241206",
 		"next": "15.0.4",
 		"postcss": "8.4.49",
 		"postcss-lightningcss": "1.0.1",
@@ -24,7 +24,7 @@
 		"eslint-config-prettier": "9.1.0",
 		"eslint-plugin-perfectionist": "4.2.0",
 		"eslint-plugin-prettier": "5.2.1",
-		"eslint-plugin-react-compiler": "19.0.0-beta-df7b47d-20241124",
+		"eslint-plugin-react-compiler": "19.0.0-beta-37ed2a7-20241206",
 		"eslint-plugin-tailwindcss": "3.17.5",
 		"eslint-plugin-unicorn": "56.0.1",
 		"husky": "9.1.7",
@@ -53,7 +53,6 @@
 		"serve": "pnpm build && pnpm start",
 		"start": "next start",
 		"test": "pnpm '/^test:.*/'",
-		"test:jest": "jest",
-		"up-deps": "pnpm up -L && pnpm i babel-plugin-react-compiler@latest eslint-plugin-react-compiler@latest"
+		"test:jest": "jest"
 	}
 }
