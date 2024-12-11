@@ -1,3 +1,4 @@
+import { includeIgnoreFile } from "@eslint/compat";
 import { FlatCompat } from "@eslint/eslintrc";
 import eslint from "@eslint/js";
 import perfectionist from "eslint-plugin-perfectionist";
@@ -12,17 +13,14 @@ import ts from "typescript-eslint";
 const compat = new FlatCompat({
 	baseDirectory: path.dirname(fileURLToPath(import.meta.url)),
 });
+const gitignorePath = fileURLToPath(new URL(".gitignore", import.meta.url));
 
 export default ts.config(
+	includeIgnoreFile(gitignorePath),
+
 	eslint.configs.recommended,
 	...ts.configs.recommended,
-	{
-		rules: {
-			"@typescript-eslint/consistent-type-imports": "error",
-		},
-	},
-	...compat.extends("next/core-web-vitals"),
-	...compat.extends("next/typescript"),
+	...compat.extends("next/core-web-vitals", "next/typescript"),
 	{
 		plugins: {
 			"react-compiler": reactCompiler,
@@ -31,11 +29,13 @@ export default ts.config(
 			"react-compiler/react-compiler": "error",
 		},
 	},
-	prettier,
-	...tailwind.configs["flat/recommended"],
 	unicorn.configs["flat/recommended"],
+	perfectionist.configs["recommended-natural"],
+	...tailwind.configs["flat/recommended"],
+	prettier,
 	{
 		rules: {
+			"@typescript-eslint/consistent-type-imports": "error",
 			"unicorn/prevent-abbreviations": [
 				"error",
 				{
@@ -47,6 +47,4 @@ export default ts.config(
 			],
 		},
 	},
-	perfectionist.configs["recommended-natural"],
-	{ ignores: [".next/", "coverage/", "node_modules/"] },
 );
