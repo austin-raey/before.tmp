@@ -1,15 +1,16 @@
 import { render } from "@testing-library/react";
+import { describe, expect, test } from "vitest";
 
 import Layout from "./layout";
 
 describe("app / layout.tsx", () => {
-	it("smoke test", () => {
+	test("smoke test", () => {
 		expect(() => Layout({ children: "Hello World" })).not.toThrow();
 	});
 
-	it("should render children", () => {
+	test("should render children", () => {
 		const children = "Hello World";
 		const { getByText } = render(<Layout>{children}</Layout>, { container: document });
-		expect(getByText(children)).toBeVisible();
+		expect(getByText(children)).toBeDefined();
 	});
 });

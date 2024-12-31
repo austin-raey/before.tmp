@@ -1,7 +1,9 @@
+import { describe, expect, test } from "vitest";
+
 import Page from "./page";
 
 describe("app / page.tsx", () => {
-	it("smoke", () => {
+	test("smoke", () => {
 		expect(() => Page()).not.toThrow();
 	});
 });

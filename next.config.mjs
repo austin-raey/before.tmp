@@ -4,11 +4,9 @@ const nextConfig = {
 		ignoreDuringBuilds: true,
 	},
 	experimental: {
-		// inlineCss: true, // Requires next@canary
+		inlineCss: true,
 		// ppr: true, // Requires next@canary
-		reactCompiler: {
-			compilationMode: "annotation",
-		},
+		reactCompiler: true,
 	},
 };
 

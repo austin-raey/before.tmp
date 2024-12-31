@@ -6,12 +6,11 @@ import prettier from "eslint-plugin-prettier/recommended";
 import reactCompiler from "eslint-plugin-react-compiler";
 import tailwind from "eslint-plugin-tailwindcss";
 import unicorn from "eslint-plugin-unicorn";
-import path from "node:path";
 import { fileURLToPath } from "node:url";
 import ts from "typescript-eslint";
 
 const compat = new FlatCompat({
-	baseDirectory: path.dirname(fileURLToPath(import.meta.url)),
+	baseDirectory: import.meta.dirname,
 });
 const gitignorePath = fileURLToPath(new URL(".gitignore", import.meta.url));
 
@@ -20,7 +19,9 @@ export default ts.config(
 
 	eslint.configs.recommended,
 	...ts.configs.recommended,
-	...compat.extends("next/core-web-vitals", "next/typescript"),
+	...compat.config({
+		extends: ["next/core-web-vitals", "next/typescript"],
+	}),
 	{
 		plugins: {
 			"react-compiler": reactCompiler,
