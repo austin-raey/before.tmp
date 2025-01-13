@@ -7,10 +7,10 @@
 		"source.addMissingImports": "always",
 		"source.fixAll": "always"
 	},
-	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	"editor.detectIndentation": false,
 	"editor.formatOnSave": true,
 	"editor.insertSpaces": false,
+	"eslint.runtime": "node",
 	"files.eol": "\n",
 	"files.exclude": {
 		".swc": true,
