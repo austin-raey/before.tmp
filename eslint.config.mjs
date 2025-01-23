@@ -4,7 +4,6 @@ import eslint from "@eslint/js";
 import perfectionist from "eslint-plugin-perfectionist";
 import prettier from "eslint-plugin-prettier/recommended";
 import reactCompiler from "eslint-plugin-react-compiler";
-import tailwind from "eslint-plugin-tailwindcss";
 import unicorn from "eslint-plugin-unicorn";
 import { fileURLToPath } from "node:url";
 import ts from "typescript-eslint";
@@ -32,7 +31,6 @@ export default ts.config(
 	},
 	unicorn.configs["flat/recommended"],
 	perfectionist.configs["recommended-natural"],
-	...tailwind.configs["flat/recommended"],
 	prettier,
 	{
 		rules: {
