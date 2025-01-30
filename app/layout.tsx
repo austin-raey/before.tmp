@@ -22,7 +22,6 @@ const GeistSans = localFont({
 	display: "swap",
 	preload: true,
 	src: "./fonts/GeistSans[wght].woff2",
-	variable: "--font-geist-sans",
 });
 
 type Props = Readonly<{
@@ -30,7 +29,7 @@ type Props = Readonly<{
 }>;
 export default function Layout(props: Props) {
 	return (
-		<html className={`${GeistSans.variable} dark:bg-black dark:text-white`} lang="en">
+		<html className={`${GeistSans.className} dark:bg-black dark:text-white`} lang="en">
 			<body className="dark:bg-black dark:text-white">{props.children}</body>
 		</html>
 	);
