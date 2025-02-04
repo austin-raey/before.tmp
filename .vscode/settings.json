@@ -1,7 +1,6 @@
 {
 	"[javascript][javascriptreact][json][jsonc][typescript][typescriptreact][yaml]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode",
-		"editor.formatOnSave": true
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
 	"editor.codeActionsOnSave": {
 		"source.addMissingImports": "always",
@@ -12,12 +11,6 @@
 	"editor.insertSpaces": false,
 	"eslint.runtime": "node",
 	"files.eol": "\n",
-	"files.exclude": {
-		".swc": true,
-		"coverage": true,
-		"next-env.d.ts": true,
-		"tsconfig.tsbuildinfo": true
-	},
 	"files.trimFinalNewlines": true,
 	"files.trimTrailingWhitespace": true,
 	"npm.packageManager": "pnpm",
