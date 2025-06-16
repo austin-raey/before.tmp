@@ -4,7 +4,6 @@ import eslint from "@eslint/js";
 import perfectionist from "eslint-plugin-perfectionist";
 import prettier from "eslint-plugin-prettier/recommended";
 import reactCompiler from "eslint-plugin-react-compiler";
-// import tailwind from "eslint-plugin-tailwindcss";
 import unicorn from "eslint-plugin-unicorn";
 import { fileURLToPath } from "node:url";
 import ts from "typescript-eslint";
@@ -18,20 +17,11 @@ export default ts.config(
 	includeIgnoreFile(gitignorePath),
 
 	eslint.configs.recommended,
-	...ts.configs.recommended,
-	// tailwind.configs["flat/recommended"],
-	...compat.config({
-		extends: ["next/core-web-vitals", "next/typescript"],
-	}),
-	{
-		plugins: {
-			"react-compiler": reactCompiler,
-		},
-		rules: {
-			"react-compiler/react-compiler": "error",
-		},
-	},
-	unicorn.configs["flat/recommended"],
+	ts.configs.recommended,
+	ts.configs.stylistic,
+	...compat.extends("next/core-web-vitals", "next/typescript"),
+	reactCompiler.configs.recommended,
+	unicorn.configs.recommended,
 	perfectionist.configs["recommended-natural"],
 	prettier,
 	{

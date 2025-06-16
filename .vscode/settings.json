@@ -14,7 +14,6 @@
 	"files.trimFinalNewlines": true,
 	"files.trimTrailingWhitespace": true,
 	"npm.packageManager": "pnpm",
-	"tailwindCSS.experimental.configFile": "./app/layout.css",
 	"typescript.enablePromptUseWorkspaceTsdk": true,
 	"typescript.tsdk": "node_modules/typescript/lib"
 }

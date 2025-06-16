@@ -4,7 +4,7 @@ import { describe, expect, test } from "vitest";
 import Layout from "./layout";
 
 describe("app / layout.tsx", () => {
-	test("smoke test", () => {
+	test("smoke", () => {
 		expect(() => Layout({ children: "Hello World" })).not.toThrow();
 	});
 

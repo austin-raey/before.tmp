@@ -9,6 +9,6 @@ export default defineConfig({
 			exclude: ["*.config.mjs", ".next", "**/*.d.ts"],
 		},
 		environment: "jsdom",
-		setupFiles: ["vitest.setup.mjs"],
+		setupFiles: ["./src/test/setup.ts"],
 	},
 });
