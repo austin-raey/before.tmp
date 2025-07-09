@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const GeistSans = localFont({
 	display: "swap",
 	preload: true,
-	src: "./fonts/Geist[wght].woff2",
+	src: "~/fonts/Geist[wght].woff2",
 });
 
 type Props = Readonly<{
