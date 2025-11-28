@@ -39,7 +39,7 @@
 	"scripts": {
 		"build": "next build",
 		"dev": "next dev",
-		"lint": "prettier --write . && eslint --fix",
+		"lint": "prettier --write --list-different --cache . && eslint --fix",
 		"start": "next start",
 		"test": "vitest run --coverage"
 	}
