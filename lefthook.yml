@@ -2,6 +2,7 @@ pre-commit:
   parallel: true
   jobs:
     - run: bunx prettier --write --list-different --cache {staged_files}
+      exclude: "*.lock"
     - run: bunx eslint --fix {staged_files}
       glob: "*.{js,ts,jsx,tsx,mjs,cjs,json,jsonc}"
     - run: bunx tsc --noEmit

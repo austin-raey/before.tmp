@@ -4,12 +4,9 @@
   "workspaces": {
     "": {
       "dependencies": {
-        "@vitejs/plugin-react": "5.1.1",
-        "@vitest/coverage-v8": "4.0.14",
         "next": "16.0.5",
         "react": "19.2.0",
         "react-dom": "19.2.0",
-        "vitest": "4.0.14",
       },
       "devDependencies": {
         "@eslint/compat": "2.0.0",
@@ -19,6 +16,8 @@
         "@types/node": "24.10.1",
         "@types/react": "19.2.7",
         "@types/react-dom": "19.2.3",
+        "@vitejs/plugin-react": "5.1.1",
+        "@vitest/coverage-v8": "4.0.14",
         "babel-plugin-react-compiler": "1.0.0",
         "eslint": "9.39.1",
         "eslint-config-next": "16.0.5",
@@ -33,6 +32,7 @@
         "typescript": "5.9.3",
         "typescript-eslint": "8.48.0",
         "vite-tsconfig-paths": "5.1.4",
+        "vitest": "4.0.14",
       },
     },
   },
@@ -1284,10 +1284,6 @@
     "eslint-plugin-react/resolve": ["resolve@2.0.0-next.5", "", { "dependencies": { "is-core-module": "^2.13.0", "path-parse": "^1.0.7", "supports-preserve-symlinks-flag": "^1.0.0" }, "bin": { "resolve": "bin/resolve" } }, "sha512-U7WjGVG9sH8tvjW5SmGbQuui75FiyjAX72HX15DwBBwF9dNiQZRQAg9nnPhYy+TUnE0+VcrttuvNI8oSxZcocA=="],
 
     "eslint-plugin-react/semver": ["semver@6.3.1", "", { "bin": { "semver": "bin/semver.js" } }, "sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA=="],
-
-    "eslint-plugin-react-hooks/zod": ["zod@4.1.13", "", {}, "sha512-AvvthqfqrAhNH9dnfmrfKzX5upOdjUVJYFqNSlkmGf64gRaTzlPwz99IHYnVs28qYAybvAlBV+H7pn0saFY4Ig=="],
-
-    "eslint-plugin-react-hooks/zod-validation-error": ["zod-validation-error@4.0.2", "", { "peerDependencies": { "zod": "^3.25.0 || ^4.0.0" } }, "sha512-Q6/nZLe6jxuU80qb/4uJ4t5v2VEZ44lzQjPDhYJNztRQ4wyWc6VF3D3Kb/fAuPetZQnhS3hnajCf9CsWesghLQ=="],
 
     "fast-glob/glob-parent": ["glob-parent@5.1.2", "", { "dependencies": { "is-glob": "^4.0.1" } }, "sha512-AOIgSQCepiJYwP3ARnGx+5VnTu2HBYdzbGP45eLw1vr3zB3vZLeyed1sC9hnbcOc9/SrMyM5RPQrkGz4aS9Zow=="],
 
