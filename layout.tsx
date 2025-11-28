@@ -7,10 +7,14 @@ export const metadata: Metadata = {
 	title: "Create Next App",
 };
 
-export default function RootLayout(props: LayoutProps<'/'>) {
+export default function RootLayout({
+	children,
+}: Readonly<{
+	children: React.ReactNode;
+}>) {
 	return (
 		<html lang="en">
-			<body className="antialiased">{props.children}</body>
+			<body className="antialiased">{children}</body>
 		</html>
 	);
 }

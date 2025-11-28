@@ -1,32 +1,34 @@
 import { includeIgnoreFile } from "@eslint/compat";
-import { FlatCompat } from "@eslint/eslintrc";
 import eslint from "@eslint/js";
+import nextVitals from "eslint-config-next/core-web-vitals";
+import nextTs from "eslint-config-next/typescript";
+import prettier from "eslint-config-prettier/flat";
 import perfectionist from "eslint-plugin-perfectionist";
-import prettier from "eslint-plugin-prettier/recommended";
 import reactCompiler from "eslint-plugin-react-compiler";
 import unicorn from "eslint-plugin-unicorn";
+import { defineConfig, globalIgnores } from "eslint/config";
 import { fileURLToPath } from "node:url";
 import ts from "typescript-eslint";
 
-const compat = new FlatCompat({
-	baseDirectory: import.meta.dirname,
-});
 const gitignorePath = fileURLToPath(new URL(".gitignore", import.meta.url));
 
-export default ts.config(
+const eslintConfig = defineConfig([
 	includeIgnoreFile(gitignorePath),
 
 	eslint.configs.recommended,
 	ts.configs.recommended,
 	ts.configs.stylistic,
-	...compat.extends("next/core-web-vitals", "next/typescript"),
-	reactCompiler.configs.recommended,
 	unicorn.configs.recommended,
 	perfectionist.configs["recommended-natural"],
+
+	reactCompiler.configs.recommended,
+	...nextVitals,
+	...nextTs,
+
 	prettier,
+
 	{
 		rules: {
-			"@typescript-eslint/consistent-type-imports": "error",
 			"unicorn/prevent-abbreviations": [
 				"error",
 				{
@@ -38,4 +40,8 @@ export default ts.config(
 			],
 		},
 	},
-);
+
+	globalIgnores([".next/**", "out/**", "build/**", "next-env.d.ts"]),
+]);
+
+export default eslintConfig;

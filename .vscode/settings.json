@@ -1,19 +1,22 @@
 {
-	"[javascript][javascriptreact][json][jsonc][typescript][typescriptreact][yaml]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
+	"biome.enabled": false,
 	"editor.codeActionsOnSave": {
-		"source.addMissingImports": "always",
-		"source.fixAll": "always"
+		"source.fixAll.eslint": "explicit",
+		"source.sort.json": "explicit"
 	},
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	"editor.detectIndentation": false,
 	"editor.formatOnSave": true,
 	"editor.insertSpaces": false,
-	"eslint.runtime": "node",
+	"eslint.enable": true,
+	// Note: The below ensures that VSCode uses the workspace version of `node`, e.g.,
+	// if you are using a version manager like `nvm` or `volta`, it will use the version specified for the project.
+	// Replace this with `bun` to use Bun as the runtime for ESLint.
+	"eslint.runtime": "bun",
 	"files.eol": "\n",
+	"files.insertFinalNewline": true,
 	"files.trimFinalNewlines": true,
 	"files.trimTrailingWhitespace": true,
-	"npm.packageManager": "pnpm",
-	"typescript.enablePromptUseWorkspaceTsdk": true,
-	"typescript.tsdk": "node_modules/typescript/lib"
+	"npm.packageManager": "bun",
+	"prettier.enable": true
 }
