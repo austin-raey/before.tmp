@@ -7,10 +7,9 @@ import perfectionist from "eslint-plugin-perfectionist";
 import reactCompiler from "eslint-plugin-react-compiler";
 import unicorn from "eslint-plugin-unicorn";
 import { defineConfig, globalIgnores } from "eslint/config";
-import { fileURLToPath } from "node:url";
 import ts from "typescript-eslint";
 
-const gitignorePath = fileURLToPath(new URL(".gitignore", import.meta.url));
+const gitignorePath = new URL(".gitignore", import.meta.url).pathname;
 
 const eslintConfig = defineConfig([
 	includeIgnoreFile(gitignorePath),

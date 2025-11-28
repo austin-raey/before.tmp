@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 	title: "Create Next App",
 };
 
-export default function RootLayout(props: LayoutProps<'/'>) {
+export default function RootLayout(props: LayoutProps<"/">) {
 	return (
 		<html lang="en">
 			<body className="antialiased">{props.children}</body>
