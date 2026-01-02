@@ -1,3 +1,8 @@
 {
-	"recommendations": ["bradlc.vscode-tailwindcss", "dbaeumer.vscode-eslint", "prettier.prettier-vscode"]
+	"recommendations": [
+		"antfu.iconify",
+		"bradlc.vscode-tailwindcss",
+		"dbaeumer.vscode-eslint",
+		"prettier.prettier-vscode"
+	]
 }

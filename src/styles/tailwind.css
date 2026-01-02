@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@plugin "@iconify/tailwind4" {
+	prefixes: lucide;
+	vertical-align: text-bottom;
+}
+
+@theme inline {
+	--font-sans: var(--font-atkinson-hyperlegible);
+	--font-serif: var(--font-crimson-pro);
+}

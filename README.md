@@ -9,13 +9,38 @@ While this repo is not the most minimal template, it does include a set of tools
 
 Often times, staring from a completely bare template can leave developers spending a lot of time setting up tooling and project structure instead of focusing on building features -- and there is an overwhelming amount of choices to make. I have tried to make some of those choices for you. You can start with this template and then remove or swap out tools as you see fit, or just keep it as is and start building your application right away.
 
+```sh
+# Clone the repo
+git clone https://github.com/austin-raey/before.tmp.git my-nextjs-app
+
+# Get started developing
+bun run dev
+bun dev
+
+# See package.json for other available scripts
+```
+
 ## Features
+
+### Core Stack
 
 - [NEXT.JS](https://nextjs.org/) with React and TypeScript
 - [Bun](https://bun.sh/) as the runtime and package manager
 - [Tailwind CSS](https://tailwindcss.com/) for styling
 - [Vitest](https://vitest.dev/) for testing
+- [`@iconify/tailwind4`](https://github.com/antfu/unplugin-icons) for icon management
+
+### Developer Experience
+
 - [ESLint](https://eslint.org/) and [Prettier](https://prettier.io/) for code quality and DX
-- [VSCode](https://code.visualstudio.com/) settings for a better DX
+  - [`eslint-plugin-perfectionist`](https://perfectionist.dev/) for predictable and consistent code sorting
+  - [`prettier-plugin-tailwindcss`](https://github.com/tailwindlabs/prettier-plugin-tailwindcss) for consistent Tailwind class sorting
 - [lefthook](https://lefthook.dev) for Git hooks management
+- [VSCode](https://code.visualstudio.com/) settings for a better DX
 - Opinionated starter project structure
+
+## Next Steps
+
+While I feel you should be able to get by with the included tools, you may want to add, modify, or remove some based on your specific needs. Here are some suggestions, in no particular order.
+
+TODO
