@@ -1,8 +1,15 @@
 pre-commit:
-  parallel: true
+  parallel: false
   jobs:
-    - run: bunx prettier --write --list-different --cache {staged_files}
-    - run: bunx eslint --no-warn-ignored --fix {staged_files}
-      glob: "*.{js,ts,jsx,tsx,mjs,cjs,json,jsonc}"
-    - run: bunx tsc --noEmit
+    - run: bun --bun next typegen
+
+    - run: bun --bun prettier --write --list-different --cache {staged_files}
+      glob: "*.{js,ts,jsx,tsx,json,jsonc,html,css,scss,md}"
+      stage_fixed: true
+
+    - run: bun --bun eslint --no-warn-ignored --fix {staged_files}
+      glob: "*.{js,ts,jsx,tsx,mjs,cjs}"
+      stage_fixed: true
+
+    - run: bun --bun tsc --noEmit --incremental false
       glob: "*.{ts,tsx}"
