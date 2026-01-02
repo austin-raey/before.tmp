@@ -19,9 +19,7 @@
 		"eslint-config-next": "16.1.1",
 		"eslint-config-prettier": "10.1.8",
 		"eslint-plugin-perfectionist": "5.2.0",
-		"eslint-plugin-react-compiler": "19.1.0-rc.2",
 		"eslint-plugin-unicorn": "62.0.0",
-		"jsdom": "27.4.0",
 		"lefthook": "2.0.13",
 		"prettier": "3.7.4",
 		"tailwindcss": "4.1.18",
@@ -39,8 +37,12 @@
 	"scripts": {
 		"build": "next build",
 		"dev": "next dev",
-		"lint": "prettier --write --list-different --cache . && eslint --fix",
+		"lint": "bun run next typegen && bun run lint:prettier && bun run lint:eslint && bun run lint:ts",
+		"lint:eslint": "eslint --fix",
+		"lint:prettier": "prettier --write --list-different --cache .",
+		"lint:ts": "tsc --noEmit",
 		"start": "next start",
-		"test": "vitest run --coverage"
+		"test": "vitest run",
+		"types": "next typegen"
 	}
 }

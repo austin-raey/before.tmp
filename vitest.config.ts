@@ -6,7 +6,9 @@ export default defineConfig({
 	plugins: [tsconfigPaths(), react()],
 	test: {
 		coverage: {
-			exclude: ["*.config.mjs", ".next", "**/*.d.ts", "src/test/**"],
+			enabled: true,
+			exclude: ["**/*.css", "**/*.d.ts", "*.config.mjs", ".next", "src/test/**"],
+			reportsDirectory: ".coverage",
 		},
 		environment: "jsdom",
 		setupFiles: ["./src/test/setup.ts"],

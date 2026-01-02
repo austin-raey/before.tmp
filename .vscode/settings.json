@@ -14,7 +14,7 @@
 	"eslint.enable": true,
 	// Note: The below ensures that VSCode uses the workspace version of `node`, e.g.,
 	// if you are using a version manager like `nvm` or `volta`, it will use the version specified for the project.
-	// Replace this with `bun` to use Bun as the runtime for ESLint.
+	// Replace this with `node` to use the user's `node` as the runtime for ESLint.
 	"eslint.runtime": "bun",
 	"files.eol": "\n",
 	"files.insertFinalNewline": true,
