@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 
-import { Atkinson_Hyperlegible_Next, Crimson_Pro } from "next/font/google";
+import { Atkinson_Hyperlegible, Crimson_Pro } from "next/font/google";
 
 import "~/styles/tailwind.css";
 
-const atkinsonHyperlegible = Atkinson_Hyperlegible_Next({
+const atkinsonHyperlegible = Atkinson_Hyperlegible({
 	display: "swap",
 	subsets: ["latin"],
 	variable: "--font-atkinson-hyperlegible",
+	weight: ["400", "700"],
 });
 const crimsonPro = Crimson_Pro({
 	display: "swap",
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout(props: Partial<LayoutProps<"/">>) {
 	return (
-		<html className={`${atkinsonHyperlegible.variable} ${crimsonPro.variable}`} lang="en">
+		<html className={`${atkinsonHyperlegible.variable} ${crimsonPro.variable} bg-black`} lang="en">
 			<head>
 				<meta charSet="utf-8" />
 				<meta content="width=device-width, initial-scale=1" name="viewport" />

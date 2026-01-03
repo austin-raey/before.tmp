@@ -9,6 +9,16 @@ While this repo is not the most minimal template, it does include a set of tools
 
 Often times, staring from a completely bare template can leave developers spending a lot of time setting up tooling and project structure instead of focusing on building features -- and there is an overwhelming amount of choices to make. I have tried to make some of those choices for you. You can start with this template and then remove or swap out tools as you see fit, or just keep it as is and start building your application right away.
 
+## Installation
+
+### CLI
+
+```sh
+# Coming soon
+```
+
+### Manual
+
 ```sh
 # Clone the repo
 git clone https://github.com/austin-raey/before.tmp.git my-nextjs-app
