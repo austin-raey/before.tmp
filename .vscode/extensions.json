@@ -1,8 +1,7 @@
 {
 	"recommendations": [
 		"antfu.iconify",
-		"bradlc.vscode-tailwindcss",
-		"dbaeumer.vscode-eslint",
-		"prettier.prettier-vscode"
+		"biomejs.biome",
+		"bradlc.vscode-tailwindcss"
 	]
 }

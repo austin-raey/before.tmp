@@ -2,25 +2,24 @@
 	//// NOTE: In general, you should override the user's settings, where possible, to ensure consistent
 	//// formatting behavior, linting behavior, etc., across all contributors to the project.
 	//// However, some settings like the user's preferences (e.g., tab size) should not be overridden.
-	"biome.enabled": false, // Explicitly disable Biome integration for users who have Biome installed.
+	"biome.enabled": true, // Explicitly enable Biome integration.
 	"editor.codeActionsOnSave": {
 		"source.addMissingImports.ts": "explicit", // Consider removing this line to allow users to control adding missing imports themselves, may be intrusive.
-		"source.fixAll.eslint": "explicit",
-		"source.fixAll.prettier": "explicit",
+		"source.fixAll.biome": "explicit",
 		"source.fixAll.ts": "explicit",
-		"source.sort.json": "explicit"
+		"source.organizeImports.biome": "explicit"
 	},
-	"editor.defaultFormatter": "prettier.prettier-vscode",
+	"editor.defaultFormatter": "biomejs.biome",
 	"editor.detectIndentation": false,
 	"editor.formatOnSave": true, // Consider removing this line to allow users to control format on save themselves.
 	"editor.insertSpaces": false,
-	// I recommend explicitly enabling ESLint and Prettier integration for clarity.
+	// I recommend explicitly disabling ESLint and Prettier integration for clarity.
 	// Some users (such as myself) have it globally disabled and prefer to enable it on a per-workspace basis.
-	"eslint.enable": true,
+	"eslint.enable": false,
 	// Note: The below ensures that VSCode uses the workspace version of `node`, e.g.,
 	// if you are using a version manager like `nvm` or `volta`, it will use the version specified for the project.
 	// Replace this with `node` to use the user's `node` as the runtime for ESLint.
-	"eslint.runtime": "bun",
+	// "eslint.runtime": "node",
 	"files.associations": {
 		"*.css": "tailwindcss"
 	},
@@ -29,5 +28,5 @@
 	"files.trimFinalNewlines": true,
 	"files.trimTrailingWhitespace": true,
 	"npm.packageManager": "bun",
-	"prettier.enable": true
+	"prettier.enable": false
 }

@@ -3,12 +3,8 @@ pre-commit:
   jobs:
     - run: bun --bun next typegen
 
-    - run: bun --bun prettier --write --list-different --cache {staged_files}
-      glob: "*.{js,ts,jsx,tsx,json,jsonc,html,css,scss,md}"
-      stage_fixed: true
-
-    - run: bun --bun eslint --no-warn-ignored --fix {staged_files}
-      glob: "*.{js,ts,jsx,tsx,mjs,cjs}"
+    - run: bunx @biomejs/biome check --write --no-errors-on-unmatched --files-ignore-unknown=true {staged_files}
+      glob: "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}"
       stage_fixed: true
 
     - run: bun --bun tsc --noEmit --incremental false

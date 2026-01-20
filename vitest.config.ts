@@ -9,7 +9,13 @@ export default defineConfig({
 			// Optionally enable coverage reporting.
 			// Also, you can enable it via CLI flag --coverage
 			// enabled: true,
-			exclude: ["**/*.css", "**/*.d.ts", "*.config.mjs", ".next", "src/test/**"],
+			exclude: [
+				"**/*.css",
+				"**/*.d.ts",
+				"*.config.mjs",
+				".next",
+				"src/test/**",
+			],
 			reportsDirectory: ".coverage",
 		},
 		environment: "jsdom",

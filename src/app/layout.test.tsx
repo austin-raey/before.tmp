@@ -10,7 +10,9 @@ describe("app / layout.tsx", () => {
 
 	test("should render children", () => {
 		const children = "Hello World";
-		const { getByText } = render(<Layout>{children}</Layout>, { container: document });
+		const { getByText } = render(<Layout>{children}</Layout>, {
+			container: document,
+		});
 		expect(getByText(children)).toBeDefined();
 	});
 });
